@@ -101,15 +101,15 @@ export default function NoteItem({
 
   return (
     <motion.div
-      className="relative p-3 bg-white/10 rounded-md min-h-[200px] backdrop-blur-md"
+      className="relative p-3 bg-white/10 rounded-md min-h-[200px] backdrop-blur-md border dark:border-none"
       initial={{ opacity: 0, filter: "blur(10px)" }}
       animate="visible"
       variants={variants}
       transition={{ duration: 0.3 }}
     >
-      <p className="font-bold text-white break-words">{title}</p>
+      <p className="font-bold text-black dark:text-white break-words">{title}</p>
       {description && (
-        <p className="text-white/70 break-words">{description}</p>
+        <p className="text-black/70 dark:text-white/70 break-words">{description}</p>
       )}
       <div className="__edit_controls absolute top-1.5 right-1.5 flex gap-1.5">
         <Dialog open={editModalState} onOpenChange={setEditModalState}>
@@ -126,7 +126,7 @@ export default function NoteItem({
                   onChange={(e) =>
                     setEditedNote({ ...editedNote, title: e.target.value })
                   }
-                  className="text-white placeholder:text-white/40"
+                  className="text-black dark:text-white dark:placeholder:text-white/40"
                   required
                 />
                 <Textarea
@@ -139,7 +139,7 @@ export default function NoteItem({
                     })
                   }
                   rows={5}
-                  className="placeholder:text-white/40"
+                  className="text-black dark:placeholder:text-white/40"
                 />
                 <Button
                   loading={editLoading}

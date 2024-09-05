@@ -8,7 +8,6 @@ import { AiOutlineLogout } from "react-icons/ai";
 import { signOut } from "next-auth/react";
 import { useToast } from "@/hooks/use-toast";
 
-
 export default function AddNote({ onNoteAdded }: { onNoteAdded: () => void }) {
   const [loading, setLoading] = useState<boolean>(false);
   const [note, setNote] = useState<INote>({ description: "", title: "" });
@@ -48,7 +47,7 @@ export default function AddNote({ onNoteAdded }: { onNoteAdded: () => void }) {
     setNote((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   return (
-    <div className="relative w-full p-3 bg-white text-black rounded-md flex flex-col min-h-[200px]">
+    <div className="relative shadow-lg dark:shadow-none w-full p-3 bg-white text-black rounded-md flex flex-col min-h-[200px]">
       <Input
         className="border-none focus-visible:ring-0 shadow-none font-bold"
         placeholder="Title"

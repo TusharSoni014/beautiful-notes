@@ -8,7 +8,7 @@ export default function Home() {
       <motion.h1
         initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }}
         animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-        transition={{ duration: 0.25 }}
+        transition={{ duration: 0.5 }}
         className=" text-2xl font-bold text-center md:text-5xl"
       >
         Beautiful Notes
@@ -16,8 +16,8 @@ export default function Home() {
       <motion.p
         initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }}
         animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-        transition={{ duration: 0.25, delay: 0.5 }}
-        className="text-white/60 text-center"
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="text-black/50 dark:text-white/60 text-center"
       >
         A simple CRUD notes app made with Framer Motion + Next JS + Typescript
       </motion.p>
