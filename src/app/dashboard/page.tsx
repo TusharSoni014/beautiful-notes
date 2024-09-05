@@ -38,7 +38,7 @@ export default function Page() {
   return (
     <AnimatePresence>
       <motion.div className="w-full h-screen">
-        <motion.div className="relative w-full p-3 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-3 overflow-y-auto max-h-screen">
+        <motion.div className="relative w-full p-3 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-3 overflow-y-auto max-h-dvh">
           <AddNote onNoteAdded={refreshNotes} />
           {notes.map((note) => (
             <motion.div
