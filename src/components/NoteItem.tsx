@@ -116,7 +116,7 @@ export default function NoteItem({
           <DialogTrigger asChild>
             <MdEdit className="cursor-pointer" />
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="border-white/30">
             <DialogHeader>
               <DialogTitle>Edit Note</DialogTitle>
               <DialogDescription className="flex flex-col gap-3">
@@ -126,7 +126,7 @@ export default function NoteItem({
                   onChange={(e) =>
                     setEditedNote({ ...editedNote, title: e.target.value })
                   }
-                  className="text-black dark:text-white dark:placeholder:text-white/40"
+                  className="text-black dark:text-white border-white/30 dark:placeholder:text-white/40"
                   required
                 />
                 <Textarea
@@ -139,7 +139,7 @@ export default function NoteItem({
                     })
                   }
                   rows={5}
-                  className="text-black dark:placeholder:text-white/40"
+                  className="text-black resize-none dark:text-white border border-white/30 dark:placeholder:text-white/40"
                 />
                 <Button
                   loading={editLoading}
@@ -156,7 +156,7 @@ export default function NoteItem({
           <DialogTrigger asChild>
             <MdDelete className="cursor-pointer" />
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="border-white/30">
             <DialogHeader>
               <DialogTitle>Delete Note</DialogTitle>
               <DialogDescription className="flex flex-col gap-3">
