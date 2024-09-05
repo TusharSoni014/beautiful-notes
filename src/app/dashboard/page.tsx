@@ -49,7 +49,12 @@ export default function Page() {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              <NoteItem description={note.description} title={note.title} />
+              <NoteItem
+                onNoteUpdated={refreshNotes}
+                id={note.id}
+                description={note.description}
+                title={note.title}
+              />
             </motion.div>
           ))}
         </motion.div>

@@ -55,6 +55,7 @@ export default function AddNote({ onNoteAdded }: { onNoteAdded: () => void }) {
         value={note.title}
         name="title"
         onChange={handleOnChange}
+        required
       />
       <Textarea
         className="border-none resize-none focus-visible:ring-0 flex-grow"
