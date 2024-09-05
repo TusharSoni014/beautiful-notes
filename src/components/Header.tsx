@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Header() {
   const { data: session } = useSession();
-  console.log(session)
+  console.log(session);
   const [links, setLinks] = React.useState([
     {
       title: "Home",
@@ -103,6 +103,7 @@ export default function Header() {
   return (
     <FloatingDock
       desktopClassName="absolute bottom-3 left-1/2 -translate-x-1/2 z-[999]"
+      mobileClassName="absolute bottom-2 right-2 z-[999] border-2 border-white/20 rounded-full"
       items={links}
     />
   );
