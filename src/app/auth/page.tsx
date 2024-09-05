@@ -20,7 +20,7 @@ export default function Component() {
         </CardHeader>
         <CardContent className="space-y-4">
           <Button
-            className="w-full"
+            className="w-full bg-white text-black hover:bg-gray-100 hover:text-black"
             variant="outline"
             onClick={handleGoogleSignIn}
           >

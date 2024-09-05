@@ -18,4 +18,19 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
+  callbacks: {
+    async session({ session }) {
+      if (session.user) {
+        const user = await prisma.user.findUnique({
+          where: { email: session.user.email! },
+        });
+        if (user) {
+          session.user = {
+            ...user,
+          };
+        }
+      }
+      return session;
+    },
+  },
 };

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen flex justify-center items-center gap-3 flex-col">
+    <div className="w-full h-screen flex justify-center items-center gap-3 flex-col p-3">
       <motion.h1
         initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }}
         animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
